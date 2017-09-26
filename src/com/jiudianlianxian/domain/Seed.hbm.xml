@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.jiudianlianxian.domain.Seed" table="farm_seed">
+		<id name="seedId" column="seedId">
+			<generator class="native"></generator>
+		</id>
+		<property name="seedName" column="seedName"></property>
+		<property name="seedGrowthTime" column="seedGrowthTime"></property>
+		<property name="seedSellingPrice" column="seedSellingPrice"></property>
+		<property name="seedImage" column="seedImage"></property>
+		<property name="seedNumber" column="seedNumber"></property>
+		<property name="seedState" column="seedState"></property>
+        
+        
+		<one-to-one name="seedLand" class="com.jiudianlianxian.domain.Land"></one-to-one>
+		<many-to-one name="seedUser" class="com.jiudianlianxian.domain.User"
+			column="userId">
+		</many-to-one>
+
+
+	</class>
+</hibernate-mapping>
