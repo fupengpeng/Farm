@@ -1,5 +1,8 @@
 package com.jiudianlianxian.domain;
 
+import java.util.HashSet;
+import java.util.Set;
+
 
 /**
  * 
@@ -12,8 +15,9 @@ package com.jiudianlianxian.domain;
  *
  */
 public class Land {
-	
+	//土地id，主键
 	private Long landId;
+	//土地名称
 	private String landName; 
 	/**
 	 * 土地状态
@@ -22,8 +26,12 @@ public class Land {
 	 *     3：未开垦
 	 */
 	private String landState;
-	private Seed landSeed;
-	private User landUser;
+	
+	private User landUser ;
+	//土地种植时，地里种植的种子,用set集合，实际只有一个
+	private Seed landSeed ;
+	
+	
 	public Long getLandId() {
 		return landId;
 	}
@@ -42,19 +50,20 @@ public class Land {
 	public void setLandState(String landState) {
 		this.landState = landState;
 	}
-	public Seed getLandSeed() {
-		return landSeed;
-	}
-	public void setLandSeed(Seed landSeed) {
-		this.landSeed = landSeed;
-	}
 	public User getLandUser() {
 		return landUser;
 	}
 	public void setLandUser(User landUser) {
 		this.landUser = landUser;
 	}
-
+	public Seed getLandSeed() {
+		return landSeed;
+	}
+	public void setLandSeed(Seed landSeed) {
+		this.landSeed = landSeed;
+	}
+	
+	
 	
 
 	

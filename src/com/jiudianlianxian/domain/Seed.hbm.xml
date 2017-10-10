@@ -9,17 +9,27 @@
 			<generator class="native"></generator>
 		</id>
 		<property name="seedName" column="seedName"></property>
+		<property name="seedState" column="seedState"></property>
 		<property name="seedGrowthTime" column="seedGrowthTime"></property>
+		<property name="seedBuyPrice" column="seedBuyPrice"></property>
 		<property name="seedSellingPrice" column="seedSellingPrice"></property>
+		<property name="seedExperience" column="seedExperience"></property>
+		<property name="seedYield" column="seedYield"></property>
+		<property name="seedFruitSellingPrice" column="seedFruitSellingPrice"></property>
+        <property name="seedType" column="seedType"></property>
 		<property name="seedImage" column="seedImage"></property>
 		<property name="seedNumber" column="seedNumber"></property>
-		<property name="seedState" column="seedState"></property>
         
-        
-		<one-to-one name="seedLand" class="com.jiudianlianxian.domain.Land"></one-to-one>
 		<many-to-one name="seedUser" class="com.jiudianlianxian.domain.User"
 			column="userId">
 		</many-to-one>
+		
+		
+		<set name="seedLands" >
+			
+			<key column="seedLandId"></key>
+			<one-to-many class="com.jiudianlianxian.domain.Land" />
+		</set>
 
 
 	</class>

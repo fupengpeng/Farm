@@ -10,8 +10,10 @@
 		</id>
 		<property name="landName" column="landName"></property>
 		<property name="landState" column="landState"></property>
-
-		<one-to-one name="landSeed" class="com.jiudianlianxian.domain.Seed"></one-to-one>
+		
+		<many-to-one name="landSeed" class="com.jiudianlianxian.domain.Seed"
+			column="seedLandId">
+		</many-to-one>
 		<many-to-one name="landUser" class="com.jiudianlianxian.domain.User"
 			column="userId">
 		</many-to-one>

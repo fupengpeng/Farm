@@ -15,16 +15,22 @@ import java.util.Set;
  *
  */
 public class User {
-	
+	//用户id，主键
 	private Long userId;
+	//用户名
 	private String userNickName;
+	//用户头像
 	private String userImage;
-	
+	//用户金币
 	private Long userGold;
-	
+	//用户经验
+	private Long userExperience;
+	//用户种子集合
 	private Set<Seed> userSeeds = new HashSet<Seed>();
+	//用户土地集合
 	private Set<Land> userLands = new HashSet<Land>();
-	
+	//用户果实集合
+	private Set<Fruit> userFruits = new HashSet<Fruit>();
 	
 	public Long getUserId() {
 		return userId;
@@ -50,6 +56,12 @@ public class User {
 	public void setUserGold(Long userGold) {
 		this.userGold = userGold;
 	}
+	public Long getUserExperience() {
+		return userExperience;
+	}
+	public void setUserExperience(Long userExperience) {
+		this.userExperience = userExperience;
+	}
 	public Set<Seed> getUserSeeds() {
 		return userSeeds;
 	}
@@ -62,6 +74,14 @@ public class User {
 	public void setUserLands(Set<Land> userLands) {
 		this.userLands = userLands;
 	}
+	public Set<Fruit> getUserFruits() {
+		return userFruits;
+	}
+	public void setUserFruits(Set<Fruit> userFruits) {
+		this.userFruits = userFruits;
+	}
+	
+	
 	
 	
 
